@@ -11,5 +11,6 @@ async def handle_message(message: types.Message):
     api_key = os.getenv('API_YANDEX_KEY')
     locator = YandexGeoLocator(api_key)
     service = WeatherForecastService(locator)
-    weather = service.get_weather(message)
+    user_input = message.text
+    weather = service.get_weather(user_input)
     await message.answer(weather)
