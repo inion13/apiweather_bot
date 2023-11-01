@@ -57,7 +57,8 @@ class WeatherForecastService:
                 f'https://api.open-meteo.com/v1/forecast?latitude={coordinates[0]}&longitude={coordinates[1]}&'
                 'current=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,rain,'
                 'showers,snowfall,cloudcover,surface_pressure,windspeed_10m,winddirection_10m&'
-                'daily=sunrise,sunset&windspeed_unit=ms&timezone=Europe%2FMoscow'
+                'daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&windspeed_unit=ms&'
+                'timezone=Europe%2FMoscow'
                 )
             r = response.json()
             return get_print(r, location)

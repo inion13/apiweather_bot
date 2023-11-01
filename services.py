@@ -9,7 +9,7 @@ def get_print(r, location):
         Снег: {r['current']['snowfall']} см
     Облачность: {r['current']['cloudcover']} {r['current_units']['cloudcover']}
     Атмосферное давление: {int(r['current']['surface_pressure']) / 1.333:.1f} мм рт. ст.
-    Wind Speed: {r['current']['windspeed_10m']} м/с
+    Скорость ветра: {r['current']['windspeed_10m']} м/с
 Восход солнца в {r['daily']['sunrise'][0][-5:]}, заход солнца в {r['daily']['sunset'][0][-5:]} по московскому времени
 '''
 
