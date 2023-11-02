@@ -15,4 +15,4 @@ async def handle_message(message: types.Message):
         weather = service.get_weather(message.text)
         await message.answer(weather)
     except Exception:
-        await message.answer('Что-то пошло не так, я не знаю этого адреса :(')
+        await message.answer('Что-то пошло не так, я не знаю этого адреса :(\nПопробуй еще раз')

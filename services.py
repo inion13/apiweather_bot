@@ -29,7 +29,11 @@ def get_print(r, location):
 '''
 
 
-def get_print_en(r, location):
+def get_zero_coords():
+    return 'Что-то пошло не так, попробуй еще раз'
+
+
+def get_print_en(r):
     return f'''
 Weather at the desired coordinates ({r['daily']['time'][0]}):
     Temperature: {r['current']['temperature_2m']}{r['current_units']['temperature_2m']} (Apparent Temperature: \
@@ -45,5 +49,3 @@ Sunrise at {r['daily']['sunrise'][0][-5:]}, sunset at {r['daily']['sunset'][0][-
 '''
 
 
-def get_zero_coords():
-    return 'Что-то пошло не так, попробуй еще раз'
