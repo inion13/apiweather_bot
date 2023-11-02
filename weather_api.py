@@ -1,7 +1,7 @@
 import requests
 
 from abc import ABC, abstractmethod
-from services import get_print, get_zero_coords
+from services import get_print
 
 
 class GeoLocatorInterface(ABC):
