@@ -6,4 +6,4 @@ help_router = Router()
 
 @help_router.message(Command(commands=['help']))
 async def get_help(message: types.Message):
-    await message.answer("Что бы воспользоваться ботом, тебе нужно просто написать нужный населенный пункт")
+    await message.answer("Чтобы воспользоваться ботом, тебе нужно просто написать нужный населенный пункт")

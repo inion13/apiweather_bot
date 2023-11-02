@@ -15,17 +15,17 @@ class YandexGeoLocator(GeoLocatorInterface):
 
     def __init__(self, api_key: str):
         self.api_key = api_key
-        self.base_url = f"https://geocode-maps.yandex.ru/1.x/?apikey={api_key}"
+        self.base_url = f'https://geocode-maps.yandex.ru/1.x/?apikey={api_key}'
 
     def get_coordinates(self, address: str) -> tuple:
-        call_url = f"{self.base_url}&geocode={address}&format=json"
+        call_url = f'{self.base_url}&geocode={address}&format=json'
         response = requests.get(call_url)
         json_response = response.json()
         try:
             lat_lon = json_response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point'][
-            'pos'].split(' ')
-            adr = json_response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['metaDataProperty'][
-                'GeocoderMetaData']['text']
+                'pos'].split(' ')
+            adr = json_response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject'][
+                'metaDataProperty']['GeocoderMetaData']['text']
             return (lat_lon[1], lat_lon[0]), adr
         except Exception:
             lat_lon = (0, 0)

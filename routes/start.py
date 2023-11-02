@@ -6,4 +6,4 @@ start_router = Router()
 
 @start_router.message(Command(commands=['start']))
 async def greetings(message: types.Message):
-    await message.answer("Hello, im bot")
+    await message.answer('Привет!\nЯ бот, показывающий прогноз погоды :)\n(для вызова справки напиши команду /help)')
