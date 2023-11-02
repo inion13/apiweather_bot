@@ -29,10 +29,6 @@ def get_print(r, location):
 '''
 
 
-def get_zero_coords():
-    return 'Что-то пошло не так, попробуй еще раз'
-
-
 def get_print_en(r):
     return f'''
 Weather at the desired coordinates ({r['daily']['time'][0]}):
